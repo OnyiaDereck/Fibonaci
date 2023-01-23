@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<title>Fibonacci</title>
+		
+		<script>
+			"use strict";
+
+			function Ausgabe(){
+			
+			        let X;
+			        let Zahl = document.getElementById("idInput").value;
+			        
+			        let fib1=0;
+			        let fib2=1;	
+			        let count = 1;
+                    let vOutput = "";
+					
+			vOutput = "Fiboaci<br>";		
+			vOutput = vOutput + "<table border=1>";	
+			vOutput = vOutput + "<tr>	<th>Zahl</td>		</tr>" +"<td>"+ "1" +"</td>";
+			
+	while (fib2 <= Zahl) {
+	X = fib1 + count;
+	fib1 = count;
+    count = X;
+
+
+	        vOutput = vOutput + "<tr> <td>"+ X +"</td>" + "</tr>" ;
+			fib2++;
+			}
+            document.getElementById("idAusgabe").innerHTML = vOutput;
+			}	
+
+		
+		</script>
+	
+	</head>
+
+	<body>
+		<h1>Fibonacci</h1>
+		Gib eine Zahl an <input id="idInput" type="text" value="10"><br><br>
+		<button onclick="Ausgabe();">Berechne!</button><br><br>
+		<div id="idAusgabe"></div>
+	</body>
+</html>
